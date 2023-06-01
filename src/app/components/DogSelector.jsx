@@ -109,6 +109,10 @@ export default function DogSelector() {
 
   };
 
+  const handleClearSelection = (event)=>{
+    setImages([]);
+  }
+
   return (
     <div>
       {isLoading == false && (
@@ -148,13 +152,24 @@ export default function DogSelector() {
           )}
 
           <div>
-            <button
+           {images.length ==0 && <button
               onClick={handleViewImage}
               className="border-2 border-white px-5 py-1  rounded-md"
             >
               {" "}
               View Images
-            </button>
+            </button>}
+
+            {images.length > 0 && <button
+              onClick={handleClearSelection}
+              className="border-2 border-white px-5 py-1  rounded-md"
+            >
+              {" "}
+              Clear Selection
+            </button>}
+
+
+
           </div>
         </div>
       )}
