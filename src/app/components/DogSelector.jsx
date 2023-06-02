@@ -1,6 +1,6 @@
 "use client";
 
-import react, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 export default function DogSelector() {
   const [breeds, setBreeds] = useState([]);
@@ -167,9 +167,6 @@ export default function DogSelector() {
               {" "}
               Clear Selection
             </button>}
-
-
-
           </div>
         </div>
       )}
